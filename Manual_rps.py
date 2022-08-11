@@ -37,6 +37,7 @@ class RockPaperScissors:
     def get_prediction(self):
         print("Please choose either rock, paper or scissors")
         countdown(5)
+        print("Press Q to lock in your choice")
         model = load_model('keras_model1.h5')
         cap = cv2.VideoCapture(0)
         data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
