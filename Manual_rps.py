@@ -128,12 +128,14 @@ def play_game(rps):
             print (f"The game is over! You had {game.user_wins} wins. The computer had {game.computer_wins} wins.")
             if game.user_wins > game.computer_wins:
                 print ("You won!")
-            else:
+            elif game.user_wins < game.computer_wins:
                 print("The computer won!")
+            else:
+                print("Its a draw !")
             break
         else:
             print(f"You have {game.user_wins} wins, and the computer has {game.computer_wins} wins.")
-            print(f"You have {game.games_left} games left.")
+            print(f"You have {game.games_left} game(s) left.")
             game.get_prediction()
 
 if __name__ == '__main__':
