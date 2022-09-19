@@ -53,9 +53,9 @@ class RockPaperScissors:
             cv2.imshow('frame', frame)
             # Press q to close the window
             print(prediction)
-            if cv2.waitKey(1) & 0xFF == ord('q'):
+            if cv2.waitKey(0) & 0xFF == ord('q'):
                 break
-
+#cv2.puttext(frame,message,array)
         if self.max_index == 0:
             self.user_choice = "rock"
         elif self.max_index == 1:
